@@ -51,6 +51,8 @@ ifeq ($(ARCH_ARM_HAVE_NEON),true)
 	LOCAL_CFLAGS += -D__ARM_HAVE_NEON
 endif
 
+LOCAL_CFLAGS += -fno-strict-aliasing
+
 # special checks for alpha == 0 and alpha == 255 in S32A_Opaque_BlitRow32
 # procedures (C and assembly) seriously improve skia performance
 LOCAL_CFLAGS += -DTEST_SRC_ALPHA
